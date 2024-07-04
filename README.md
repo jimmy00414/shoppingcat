@@ -1,9 +1,7 @@
-# ShoppingCart (六角買到吃手手)
-> 此為Bootstrap4切版練習六角買到吃手手
-
-![](https://i.imgur.com/wUttnqX.png)
+# ShoppingCart
+此為Bootstrap4安全喵購物網
 ## Demo
-[https://hsiangfeng.github.io/ShoppingCart](https://hsiangfeng.github.io/ShoppingCart)
+
 ## 使用技術&練習技術
 - HTML5
 - CSS3
