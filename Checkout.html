@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>安全喵喵結帳</title>
+    <link rel="stylesheet" href="/ShoppingCart/css/custom.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+  </style>
+
+  <body>
+    <!--navber-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/"
+        ><i class="fas fa-shopping-basket"></i>安全喵購物網</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto"></ul>
+        <div class="dropdown ml-auto">
+          <button class="btn btn-sm btn-cart" data-toggle="dropdown">
+            <i class="fas fa-shopping-cart text-dark fa-2x"></i>
+            <span class="badge badge-pill badge-danger">2</span>
+          </button>
+          <div
+            class="dropdown-menu dropdown-menu-right"
+            style="min-width: 300px"
+          >
+            <div class="px-4 py-3">
+              <table class="table table-sm">
+                <thead>
+                  <th colspan="4" class="text-center">已選擇商品</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a
+                        href="#"
+                        data-toggle="modal"
+                        data-target="#removeModal"
+                        data-title="ARAI RX-7X NAKAGAMI GP2全罩安全帽"
+                        ><i class="far fa-trash-alt fa-1x text-danger"></i
+                      ></a>
+                    </td>
+                    <td>ARAI RX-7X NAKAGAMI GP2全罩安全帽</td>
+                    <td>1件</td>
+                    <td>$520</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a
+                        href="#"
+                        data-toggle="modal"
+                        data-target="#removeModal"
+                        data-title="全白瓜皮安全帽"
+                        ><i class="far fa-trash-alt fa-1x text-danger"></i
+                      ></a>
+                    </td>
+                    <td>全白瓜皮安全帽</td>
+                    <td>1件</td>
+                    <td>$480</td>
+                  </tr>
+                  <tr>
+                    <td colspan="4">
+                      <button type="submit" class="btn btn-primary btn-block">
+                        送出
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container main-contant py-5">
+      <h1 class="text-center mb-3 text-secondary">安全喵喵 結帳</h1>
+      <div class="form-row text-center">
+        <div class="col-12 col-sm">
+          <div class="alert alert-primary alert-rounded" role="alert">
+            1.輸入訂單資料
+          </div>
+        </div>
+        <div class="col-12 col-sm">
+          <div class="alert alert-light alert-rounded" role="alert">
+            2.金流付款
+          </div>
+        </div>
+        <div class="col-12 col-sm">
+          <div class="alert alert-light alert-rounded" role="alert">3.完成</div>
+        </div>
+      </div>
+      <div class="row justify-content-center py-5">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <button
+                class="btn btn-link"
+                data-toggle="collapse"
+                data-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                顯示購物車細節
+              </button>
+            </div>
+            <div
+              id="collapseOne"
+              class="collapse"
+              aria-labelledby="headingOne"
+              data-parent="#accordion"
+            >
+              <table class="table table-sm text-center">
+                <thead>
+                  <th width="30px"></th>
+                  <th width="100px"></th>
+                  <th class="text-center">商品名稱</th>
+                  <th width="100px" class="text-center">數量</th>
+                  <th width="80px" class="text-center">小計</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="align-middle">
+                      <a
+                        href="#"
+                        data-toggle="modal"
+                        data-target="#removeModal"
+                        data-title="ARAI RX-7X NAKAGAMI GP2全罩安全帽"
+                        ><i class="far fa-trash-alt fa-1x text-danger"></i
+                      ></a>
+                    </td>
+                    <td class="align-middle">
+                      <img
+                        src="./image/11.jpg"
+                        height="50px"
+                      />
+                    </td>
+                    <td class="align-middle">ARAI RX-7X NAKAGAMI GP2全罩安全帽</td>
+                    <td class="align-middle">1件</td>
+                    <td class="align-middle text-right">$520</td>
+                  </tr>
+                  <tr>
+                  </tr>
+                  <tr>
+
+                                 <td class="align-middle">
+                      <a
+                        href="#"
+                        data-toggle="modal"
+                        data-target="#removeModal"
+                        data-title="全白瓜皮安全帽"
+                        ><i class="far fa-trash-alt fa-1x text-danger"></i
+                      ></a>
+                    </td>
+                    <td class="align-middle">
+                      <img
+                        src="./image/31.jpg"
+                        height="50px"
+                      />
+                    </td>
+                    <td class="align-middle">全白瓜皮安全帽</td>
+                    <td class="align-middle">1件</td>
+                    <td class="align-middle text-right">$520</td>
+                  </tr>
+                  <tr>
+                    <td colspan="4" class="text-right">運費</td>
+                    <td class="align-middle text-right">
+                      <strong>$60</strong>
+                    </td>
+                  </tr>
+                    <td colspan="4" class="text-right">合計</td>
+                    <td class="align-middle text-right">
+                      <strong>$1100</strong>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <form class="needs-validation mt-3" novalidate>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="name">姓名</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="姓名"
+                  required
+                />
+                <div class="invalid-feedback">請輸入姓名</div>
+              </div>
+              <div class="form-group col-md">
+                <label for="inputEmail">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="inputEmail"
+                  placeholder="Email"
+                  required
+                />
+                <div class="invalid-feedback">請輸入信箱</div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md">
+                <label for="address1">國家</label>
+                <select id="address1" class="form-control" required>
+                  <option selected>台灣...</option>
+                  <option>...</option>
+                </select>
+                <div class="invalid-feedback">請輸入國家</div>
+              </div>
+              <div class="form-group col-md">
+                <label for="address2">城市</label>
+                <select id="address2" class="form-control" required>
+                  <option selected>台北市</option>
+                  <option>...</option>
+                </select>
+                <div class="invalid-feedback">請輸入居住地</div>
+              </div>
+              <div class="form-group col-md">
+                <label for="number" required>郵遞區號</label>
+                <input type="email" class="form-control" id="number" required />
+                <div class="invalid-feedback">請輸入郵遞區號</div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-12">
+                <label for="inputCity">地址</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputCity"
+                  required
+                />
+                <div class="invalid-feedback">請輸入寄送地址</div>
+              </div>
+            </div>
+            <div class="text-right">
+              <a
+                href="./index.html"
+                class="btn btn-secondary"
+                >繼續選購</a
+              >
+              <a href="./CheckoutEnd.html" class="btn btn-primary"
+                >確認付款</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-light text-muted py-5">
+      <div class="container">
+        <ul class="list-inline text-center">
+          <li class="list-inline-item">© Copright 2024 安全喵喵</li>
+          <li class="list-inline-item">
+            <a href="#" class="text-info">
+              <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#" class="text-info">
+              <i class="fab fa-instagram"></i> instagram
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#" class="text-info">
+              <i class="fas fa-user-tag"></i> About
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <div
+      class="modal fade"
+      id="removeModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="removeModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-danger">
+            <h5 class="modal-title text-white" id="removeModalLabel">
+              刪除視窗
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">您確定要刪除該商品?</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-dismiss="modal"
+            >
+              取消
+            </button>
+            <button type="button" class="btn btn-outline-danger">刪除</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //validated
+        (function () {
+          "use strict";
+          window.addEventListener(
+            "load",
+            function () {
+              // Fetch all the forms we want to apply custom Bootstrap validation styles to
+              var forms = document.getElementsByClassName("needs-validation");
+              // Loop over them and prevent submission
+              var validation = Array.prototype.filter.call(
+                forms,
+                function (form) {
+                  form.addEventListener(
+                    "submit",
+                    function (event) {
+                      if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                      }
+                      form.classList.add("was-validated");
+                    },
+                    false
+                  );
+                }
+              );
+            },
+            false
+          );
+        })();
+        //removeModal
+        $("#removeModal").on("show.bs.modal", function (event) {
+          var btn = $(event.relatedTarget);
+          console.log(btn);
+          var removeTitle = btn.data("title");
+          console.log(removeTitle);
+          var modal = $(this);
+          modal.find(".modal-title").text("確定要刪除" + removeTitle + "?");
+          console.log(modal);
+        });
+      });
+    </script>
+  </body>
+</html>
