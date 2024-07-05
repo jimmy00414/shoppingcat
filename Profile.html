@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人資料</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">安全喵購物網</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="OrderList.html">訂單列表</a></li>
+                <li class="nav-item"><a class="nav-link" href="Profile.html">個人資料</a></li>
+                <li class="nav-item"><a class="nav-link" href="ChangePassword.html">修改密碼</a></li>
+                <li class="nav-item"><a class="nav-link" href="Coupons.html">優惠卷</a></li>
+                <li class="nav-item"><a class="nav-link" href="Points.html">積分</a></li>
+                <li class="nav-item"><a class="nav-link" href="Favorites.html">喜好商品</a></li>
+                <li class="nav-item"><a class="nav-link" href="BrowsingHistory.html">瀏覽紀錄</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>個人資料</h1>
+        <form id="profileForm" method="post" action="save_profile.php">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" value="N1106499****@ntub.edu.tw" readonly>
+            </div>
+            <div class="form-group">
+                <label for="password">密碼:</label>
+                <input type="text" class="form-control" id="password" name="password" value="******">
+            </div>
+            <div class="form-group">
+                <label for="name">姓名:</label>
+                <input type="text" class="form-control" id="name" name="name" value="劉*華">
+            </div>
+            <div class="form-group">
+                <label for="phone">電話:</label>
+                <input type="text" class="form-control" id="phone" name="phone" value="09-1999****">
+            </div>
+            <div class="form-group">
+                <label for="address">寄送地址:</label>
+                <input type="text" class="form-control" id="address" name="address" value="忠孝東路走*遍">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="saveProfile()">儲存</button>
+        </form>
+    </div>
+
+    <script>
+        function saveProfile() {
+            if (confirm("確定要儲存嗎？")) {
+                $.ajax({
+                    url: 'save_profile.php',
+                    type: 'post',
+                    data: $('#profileForm').serialize(),
+                    success: function(response) {
+                        alert("儲存成功！");
+                        window.location.href = "index.html";
+                    },
+                    error: function() {
+                        alert("儲存失敗，請稍後再試。");
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>
