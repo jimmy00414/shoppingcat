@@ -9,6 +9,12 @@
 <body>
     <div class="container">
         <h2>登入</h2>
+        
+        <!-- 登入失敗訊息 -->
+        <div id="login-failed-message" class="alert alert-danger" style="display: none;">
+            登入失敗，請重新登入。
+        </div>
+
         <form action="login.php" method="post">
             <div class="form-group">
                 <label for="email">Email:</label>
@@ -23,5 +29,14 @@
             <a href="forgot_password.html" class="btn btn-link">忘記密碼</a>
         </form>
     </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('error') && urlParams.get('error') === 'login_failed') {
+                document.getElementById('login-failed-message').style.display = 'block';
+            }
+        });
+    </script>
 </body>
 </html>
