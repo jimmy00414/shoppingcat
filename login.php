@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if ($login_successful) {
-        header("Location: index.html");
+        header("Location: productList.html");
         exit();
     } else {
         header("Location: login.html?error=login_failed");

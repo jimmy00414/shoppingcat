@@ -1,0 +1,50 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+.navbar-brand {
+    font-weight: bold;
+    color: #333;
+}
+.navbar-nav .nav-link {
+    color: #333;
+}
+.carousel-inner img {
+    max-height: 600px;
+    object-fit: cover;
+}
+.container h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+.container p {
+    color: #666;
+}
+.about-us-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.about-us-section h3 {
+    font-weight: bold;
+    color: #333;
+}
+.about-us-section img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+.footer {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+.footer h5 {
+    font-weight: bold;
+    color: #333;
+}
+.footer a {
+    color: #666;
+}
+.footer a:hover {
+    color: #333;
+}
