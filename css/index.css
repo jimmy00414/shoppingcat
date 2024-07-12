@@ -3,8 +3,7 @@ body {
     line-height: 1.6;
 }
 .navbar-brand {
-    font-weight: bold;
-    color: #333;
+color: #333;
 }
 .navbar-nav .nav-link {
     color: #333;
