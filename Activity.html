@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最新活動</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <style>
+        .event-card {
+            transition: transform 0.3s;
+        }
+        .event-card:hover {
+            transform: scale(1.05);
+        }
+        .card-body {
+            text-align: center;
+        }
+        .event-date {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #FF5733;
+            margin-top: 10px;
+        }
+        .jumbotron {
+            position: relative;
+            background: url('./image/68.webp') no-repeat center center;
+            background-size: cover;
+            color: white;
+            height: 70vh;
+        }
+        .jumbotron::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* 控制透明度 */
+            z-index: 0;
+        }
+        .jumbotron .container {
+            position: relative;
+            z-index: 1;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        footer {
+            background-color: #f8f9fa;
+            padding: 1.5rem 0;
+        }
+        footer .list-inline-item a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        footer .list-inline-item a:hover {
+            text-decoration: underline;
+        }
+        .navbar-nav {
+            flex-direction: row;
+        }
+        .nav-link {
+            padding-right: .5rem !important;
+            padding-left: .5rem !important;
+        }
+        .navbar-brand i {
+            font-size: 1.5rem;
+        }
+        .cart-icon {
+            position: relative;
+            display: inline-block;
+        }
+        .cart-icon .badge {
+            position: absolute;
+            top: -5px;
+            right: -10px;
+            padding: 5px 10px;
+            border-radius: 50%;
+            background-color: red;
+            color: white;
+        }
+
+    .card-img-top {
+    width: 100%;
+    height: 500px;
+    
+}
+
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/"><i class="fas fa-shopping-basket"></i> 安全喵購物網</a>
+        <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="productList.html">商品列表</a></li>
+                <li class="nav-item"><a class="nav-link" href="order.html">我的訂單</a></li>
+                <li class="nav-item"><a class="nav-link" href="Favorites.html">我的最愛</a></li>
+                <li class="nav-item"><a class="nav-link" href="Checkout.html">結帳</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">登入</a></li>
+                <li class="nav-item"><a class="nav-link" href="admin.html">管理後台</a></li>
+                <li class="nav-item"><a class="nav-link" href="Member.html">會員中心</a></li>
+                <li class="nav-item active"><a class="nav-link" href="events.html">活動消息 <span class="sr-only">(current)</span></a></li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link cart-icon" href="cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="badge">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+            <h1 class="display-4">最新活動</h1>
+            <p class="lead">探索我們最新的促銷和活動，參與並享受更多優惠！</p>
+        </div>
+    </div>
+
+    <h2 class="text-center mt-5">目前活動</h2>
+    
+    <div class="container my-5">
+        <div class="row">
+            
+            <div class="col-md-6 mb-4">
+                <div class="card event-card">
+                    <img src="./image/63.jpg" class="card-img-top" alt="Event Image 1">
+                    <div class="card-body">
+                        <p class="event-date">7/15 - 7/31</p>
+                        <p class="card-text">買就送防摔手套</p>
+                        <a href="productList.html" class="btn btn-primary">了解更多</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+                <div class="card event-card">
+                    <img src="./image/64.jpg" class="card-img-top" alt="Event Image 2">
+                    <div class="card-body">
+                        <p class="event-date">8/1 - 8/31</p>
+                        <p class="card-text">任選兩件85折</p>
+                        <a href="productList.html" class="btn btn-primary">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer class="bg-light text-center py-4">
+        <div class="container">
+            <ul class="list-inline">
+                <li class="list-inline-item">© Copyright 2024 安全喵購物網</li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li class="list-inline-item"><a href="#"><i class="fas fa-user-tag"></i> About</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

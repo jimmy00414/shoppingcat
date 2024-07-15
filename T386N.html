@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>產品清單頁</title>
+    <link rel="stylesheet" href="/ShoppingCart/css/custom.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+        integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+</head>
+<style>
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif
+    }
+</style>
+
+<body>
+    <!--navber-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/"><i class="fas fa-shopping-basket"></i>安全喵購物網</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <div class="dropdown ml-auto">
+                <button class="btn btn-sm btn-cart" data-toggle="dropdown">
+                    <i class="fas fa-shopping-cart text-dark fa-2x"></i>
+                    <span class="badge badge-pill badge-danger">2</span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" style="min-width:300px">
+                    <div class="px-4 py-3">
+                        <table class="table table-sm">
+                            <thead>
+                                <th colspan="4" class="text-center">已選擇商品</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><i class="far fa-trash-alt fa-1x"></i></td>
+                                    <td><a href="Browse.html">ARAI RX-7X NAKAGAMI GP2全罩安全帽</a></td>
+                                    <td>1件</td>
+                                    <td>$520</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="far fa-trash-alt fa-1x"></i></td>
+                                    <td><a href="Browse.html">全白西瓜皮安全帽</a></td>
+                                    <td>1件</td>
+                                    <td>$520</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4"><button type="submit" class="btn btn-primary btn-block">送出</button>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-transparent pl-0">
+                <li class="breadcrumb-item"><a href="#">最新消息</a></li>
+                <li class="breadcrumb-item"><a href="#">品牌介紹</a></li>
+                <li class="breadcrumb-item active" aria-current="page">安全喵</li>
+            </ol>
+        </nav>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="sticky-top" style="top:10px;">
+                    <h1 class="h2">T318S-Pilot 領航員
+                        
+                    </h1>
+                    <div class="d-flex justify-content-end align-items-end">
+                        <div class="text-muted ">售價 $2800</div>
+                        <div class="h3 ml-auto mb-0 text-danger">
+                            <small>網路價 NT$</small>
+                            <strong>2500</strong>
+                        </div>
+                    </div>
+                    <hr>
+                    尺寸:
+                    <div class="btn-group btn-group-toggle btn-group-sm" data-toggle="buttons">
+                        <label class="btn btn-outline-secondary active">
+                            <input type="radio" name="options" id="option1" autocomplete="off" checked> SM
+                        </label>
+                        <label class="btn btn-outline-secondary">
+                            <input type="radio" name="options" id="option2" autocomplete="off"> M
+                        </label>
+                        <label class="btn btn-outline-secondary disabled">
+                            <input type="radio" name="options" id="option3" autocomplete="off"> L
+                        </label>
+                        <label class="btn btn-outline-secondary">
+                            <input type="radio" name="options" id="option3" autocomplete="off"> XL
+                        </label>
+                    </div>
+                    <div class="input-group mt-3">
+                        <select name="" id="" class="form-control mr-1">
+                            <option value="1">1 頂</option>
+                            <option value="1">2 頂</option>
+                            <option value="1">3 頂</option>
+                            <option value="1">4 頂</option>
+                            <option value="1">5 頂</option>
+                            <option value="1">6 頂</option>
+                            <option value="1">7 頂</option>
+                            <option value="1">8 頂</option>
+                            <option value="1">9 頂</option>
+                        </select>
+                        <a href="./Checkout.html" class="btn btn-primary">加入購物車</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8 text-center">
+                <h2>THH 兒童飛行員全罩式安全帽</h2>
+                <p class="text-center">T386N全罩式安全帽沿襲了T386SP的優點並進一步升級。它具備流暢帥氣的外觀設計，空力設計進一步升級。前額進氣及後方排氣系統有效提升通風效率，使頭部保持舒爽不悶熱。外鏡片加長設計提供從面部到頸部的全方位防護。通風件與帽體的完美結合展現卓越的設計，並通過美國DOT與台灣CNS雙重安全測試，確保外觀與安全性兼具。</p>
+                <h3 class="text-center"><strong>時尚外觀</strong></h3>
+                <img src="./image/71.jpg" class="img-fluid w-100"
+                    alt="">
+                <h3 class="text-center"><strong>舒適透氣</strong></h3>
+                <img src="./image/70.jpg" class="img-fluid w-100"
+                    alt="">
+                <h3 class="text-center"><strong>易於使用</strong></h3>
+                <img src="./image/72.jpg" class="img-fluid w-100"
+                    alt="">
+                <div class="card p-2 bg-light mt-4">
+                    <div class="card-body">
+                        <h2 class="text-center">購物說明</h2>
+                        <p>尺寸：
+                        xs:55-56cm
+                        M：57-58cm
+                        L：59-60cm
+                        XL：61-62cm
+                        <br>
+                        ※頭圍測量方法：
+                        拿皮尺在眉毛上方約1公分處
+                        如果沒有皮尺，可使用棉線等物體代替，在固定測量長度後以尺
+                        可量測2-3次抓取平均值會
+                        註：每個人頭型較為不同，有些微誤差皆屬於正常喔!
+                        <br>
+                        注意事項：<br>
+                        商品變動快速，可先詢問庫存。<br>
+                        超商取貨有積材限制，欲購買一頂安全帽以上須分2筆訂單。<br>
+                        每款螢幕色調不同，商品難免有些許色差，以原廠實際商品為主。<br>
+                        網路購物皆享有鑑賞期(非試用期)，商品經拆封使用無法退換貨，還請見諒。<br>
+                        如要到門市購買，請先和客服詢問庫存情況，以免造成雙方不便。<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="bg-light text-muted py-5">
+            <div class="container">
+                <ul class="list-inline text-center">
+                    <li class="list-inline-item"> © Copright 2024 安全喵喵</li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-info">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-info">
+                            <i class="fab fa-instagram"></i> instagram
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="text-info">
+                            <i class="fas fa-user-tag"></i> About
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
+</body>
+
+</html>
