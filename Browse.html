@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>產品清單頁</title>
+    <link rel="stylesheet" href="/ShoppingCart/css/Broedr.css">
     <link rel="stylesheet" href="/ShoppingCart/css/custom.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
         integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
@@ -82,7 +83,7 @@
             <div class="col-md-4">
                 <div class="sticky-top" style="top:10px;">
                     <h1 class="h2">ARAI RX-7X NAKAGAMI GP2全罩安全帽
-                        
+
                     </h1>
                     <div class="d-flex justify-content-end align-items-end">
                         <div class="text-muted ">售價 $999</div>
@@ -128,40 +129,63 @@
                 <h2>ARAI RX-7X NAKAGAMI GP2全罩安全帽</h2>
                 <p class="text-center">Arai RX-7X是目前最新頂級款式，徹底實現「高剛性」、「輕量化」、「超密合」的三大理想。</p>
                 <h3 class="text-center"><strong>帥氣外觀</strong></h3>
-                <img src="/image/51.png" class="img-fluid w-100"
-                    alt="">
+                <img src="/image/51.png" class="img-fluid w-100" alt="">
                 <h3 class="text-center"><strong>優秀通風</strong></h3>
-                <img src="/image/52.png" class="img-fluid w-100"
-                    alt="">
+                <img src="/image/52.png" class="img-fluid w-100" alt="">
                 <h3 class="text-center"><strong>舒適內襯</strong></h3>
-                <img src="/image/53.png" class="img-fluid w-100"
-                    alt="">
+                <img src="/image/53.png" class="img-fluid w-100" alt="">
                 <div class="card p-2 bg-light mt-4">
                     <div class="card-body">
                         <h2 class="text-center">購物說明</h2>
                         <p>尺寸：
-                        xs:55-56cm
-                        M：57-58cm
-                        L：59-60cm
-                        XL：61-62cm
-                        <br>
-                        ※頭圍測量方法：
-                        拿皮尺在眉毛上方約1公分處
-                        如果沒有皮尺，可使用棉線等物體代替，在固定測量長度後以尺
-                        可量測2-3次抓取平均值會
-                        註：每個人頭型較為不同，有些微誤差皆屬於正常喔!
-                        <br>
-                        注意事項：<br>
-                        商品變動快速，可先詢問庫存。<br>
-                        超商取貨有積材限制，欲購買一頂安全帽以上須分2筆訂單。<br>
-                        每款螢幕色調不同，商品難免有些許色差，以原廠實際商品為主。<br>
-                        網路購物皆享有鑑賞期(非試用期)，商品經拆封使用無法退換貨，還請見諒。<br>
-                        如要到門市購買，請先和客服詢問庫存情況，以免造成雙方不便。<br>
+                            xs:55-56cm
+                            M：57-58cm
+                            L：59-60cm
+                            XL：61-62cm
+                            <br>
+                            ※頭圍測量方法：
+                            拿皮尺在眉毛上方約1公分處
+                            如果沒有皮尺，可使用棉線等物體代替，在固定測量長度後以尺
+                            可量測2-3次抓取平均值會
+                            註：每個人頭型較為不同，有些微誤差皆屬於正常喔!
+                            <br>
+                            注意事項：<br>
+                            商品變動快速，可先詢問庫存。<br>
+                            超商取貨有積材限制，欲購買一頂安全帽以上須分2筆訂單。<br>
+                            每款螢幕色調不同，商品難免有些許色差，以原廠實際商品為主。<br>
+                            網路購物皆享有鑑賞期(非試用期)，商品經拆封使用無法退換貨，還請見諒。<br>
+                            如要到門市購買，請先和客服詢問庫存情況，以免造成雙方不便。<br>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <h2>評論</h2>
+                    <form id="commentForm">
+                        <div class="form-group">
+                            <label for="name">姓名</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">留言</label>
+                            <textarea class="form-control" id="comment" name="comment" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">送出</button>
+                    </form>
+                    <div id="commentsSection" class="mt-5">
+                        <h3>所有評論</h3>
+                        <div id="commentsList">
+                            <!-- 這裡會動態載入評論 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
 
         <footer class="bg-light text-muted py-5">
@@ -194,6 +218,47 @@
             integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
             crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
+
+
+        <!-- 表單提交並動態更新評論區域 -->
+        <script>
+            $(document).ready(function () {
+                // 載入評論的函數
+                function loadComments() {
+                    $.ajax({
+                        url: 'load_comments.php',
+                        method: 'GET',
+                        success: function (response) {
+                            $('#commentsList').html(response);
+                        }
+                    });
+                }
+
+                // 初次載入
+                loadComments();
+
+                // 處理表單提交
+                $('#commentForm').on('submit', function (event) {
+                    event.preventDefault();
+                    var name = $('#name').val();
+                    var comment = $('#comment').val();
+                    $.ajax({
+                        url: 'add_comment.php',
+                        method: 'POST',
+                        data: { name: name, comment: comment },
+                        success: function (response) {
+                            if (response == 'success') {
+                                loadComments();
+                                $('#commentForm')[0].reset();
+                            } else {
+                                alert('添加評論時出錯');
+                            }
+                        }
+                    });
+                });
+            });
+        </script>
+
 </body>
 
 </html>
