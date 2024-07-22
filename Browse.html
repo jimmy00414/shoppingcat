@@ -44,7 +44,7 @@
                     <div class="px-4 py-3">
                         <table class="table table-sm">
                             <thead>
-                                <th colspan="4" class="text-center">已選擇商品</th>
+                                <th colspan="4" class="text-center">已選擇商品B</th>
                             </thead>
                             <tbody>
                                 <tr>
@@ -161,7 +161,7 @@
             </div>
         </div>
 
-        <div class="container mt-5">
+        <!-- <div class="container mt-5">
             <div class="row">
                 <div class="col-md-8 offset-md-2">
                     <h2>評論</h2>
@@ -179,12 +179,12 @@
                     <div id="commentsSection" class="mt-5">
                         <h3>所有評論</h3>
                         <div id="commentsList">
-                            <!-- 這裡會動態載入評論 -->
+                            這裡會動態載入評論
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
 
@@ -220,10 +220,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
 
 
-        <!-- 表單提交並動態更新評論區域 -->
+        <!-- 表單提交並動態更新評論區域
         <script>
             $(document).ready(function () {
-                // 載入評論的函數
+                載入評論的函數
                 function loadComments() {
                     $.ajax({
                         url: 'load_comments.php',
@@ -234,10 +234,10 @@
                     });
                 }
 
-                // 初次載入
+                初次載入
                 loadComments();
 
-                // 處理表單提交
+                處理表單提交
                 $('#commentForm').on('submit', function (event) {
                     event.preventDefault();
                     var name = $('#name').val();
@@ -257,7 +257,7 @@
                     });
                 });
             });
-        </script>
+        </script> -->
 
 </body>
 

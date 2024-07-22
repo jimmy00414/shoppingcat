@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,9 +17,10 @@
             width: 200px;
             padding: 20px;
             background: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border: 1px solid #ddd;
-            display: none; /* 預設隱藏 */
+            display: none;
+            /* 預設隱藏 */
             z-index: 1050;
         }
 
@@ -29,103 +31,81 @@
 
         .card:hover {
             transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
+
 <body>
     <!-- 最上面 -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/"
-          ><i class="fas fa-shopping-basket"></i>安全喵購物網</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <a class="navbar-brand" href="/"><i class="fas fa-shopping-basket"></i>安全喵購物網</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-  
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-              <li class="nav-item"><a class="nav-link" href="productList.html">商品列表</a></li>
-              <li class="nav-item"><a class="nav-link" href="order.html">我的訂單</a> </li>
-              <li class="nav-item"><a class="nav-link" href="Favorites.html">我的最愛</a></li>
-              <li class="nav-item"><a class="nav-link" href="Checkout.html">結帳</a></li>
-              <a href="login.html" class="nav-link">登入</a>
-              <li class="nav-item"><a class="nav-link" href="admin.html">管理後台</a></li>
-              <li class="nav-item"><a class="nav-link" href="Member.html  ">會員中心</a></li>
-              <li class="nav-item"><a class="nav-link" href="Activity.html">最新活動</a></li>
-          </ul>
-      </div>
-  
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto"></ul>
-          <div class="dropdown ml-auto">
-            <button class="btn btn-sm btn-cart" data-toggle="dropdown">
-              <i class="fas fa-shopping-cart text-dark fa-2x"></i>
-              <span class="badge badge-pill badge-danger">2</span>
-            </button>
-            <div
-              class="dropdown-menu dropdown-menu-right"
-              style="min-width: 300px">
-              <div class="px-4 py-3">
-                <table class="table table-sm">
-                  <thead>
-                    <th colspan="4" class="text-center">已選擇商品</th>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <a
-                          href="#"
-                          data-toggle="modal"
-                          data-target="#removeModal"
-                          data-title="ARAI RX-7X NAKAGAMI GP2全罩安全帽"
-                          ><i class="far fa-trash-alt fa-1x text-danger"></i
-                        ></a>
-                      </td>
-                       <td><a href="Browse.html">ARAI RX-7X NAKAGAMI GP2全罩安全帽</a></td>
-                      <td>1件</td>
-                      <td class="text-right text-danger">$520</td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a
-                          href="#"
-                          data-toggle="modal"
-                          data-target="#removeModal"
-                          data-title="全白瓜皮安全帽"
-                          ><i class="far fa-trash-alt fa-1x text-danger"></i
-                        ></a>
-                      </td>
-                      <td><a href="Browse.html">全白瓜皮安全帽</a></td>
-                      <td>1件</td>
-                      <td class="text-right text-danger">$520</td>
-                    </tr>
-                    <tr>
-                      <td colspan="4">
-                        <a
-                          href="./Checkout.html"
-                          type="submit"
-                          class="btn btn-primary btn-block"
-                          >送出</a
-                        >
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="productList.html">商品列表</a></li>
+                <li class="nav-item"><a class="nav-link" href="order.html">我的訂單</a> </li>
+                <li class="nav-item"><a class="nav-link" href="Favorites.html">我的最愛</a></li>
+                <li class="nav-item"><a class="nav-link" href="Checkout.html">結帳</a></li>
+                <a href="login.html" class="nav-link">登入</a>
+                <li class="nav-item"><a class="nav-link" href="admin.html">管理後台</a></li>
+                <li class="nav-item"><a class="nav-link" href="Member.html  ">會員中心</a></li>
+                <li class="nav-item"><a class="nav-link" href="Activity.html">最新活動</a></li>
+            </ul>
         </div>
-      </nav>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto"></ul>
+            <div class="dropdown ml-auto">
+                <button class="btn btn-sm btn-cart" data-toggle="dropdown">
+                    <i class="fas fa-shopping-cart text-dark fa-2x"></i>
+                    <span class="badge badge-pill badge-danger">2</span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" style="min-width: 300px">
+                    <div class="px-4 py-3">
+                        <table class="table table-sm">
+                            <thead>
+                                <th colspan="4" class="text-center">已選擇商品I</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="#" data-toggle="modal" data-target="#removeModal"
+                                            data-title="ARAI RX-7X NAKAGAMI GP2全罩安全帽"><i
+                                                class="far fa-trash-alt fa-1x text-danger"></i></a>
+                                    </td>
+                                    <td><a href="Browse.html">ARAI RX-7X NAKAGAMI GP2全罩安全帽</a></td>
+                                    <td>1件</td>
+                                    <td class="text-right text-danger">$520</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#" data-toggle="modal" data-target="#removeModal"
+                                            data-title="全白瓜皮安全帽"><i class="far fa-trash-alt fa-1x text-danger"></i></a>
+                                    </td>
+                                    <td><a href="Browse.html">全白瓜皮安全帽</a></td>
+                                    <td>1件</td>
+                                    <td class="text-right text-danger">$520</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+                                        <a href="./Checkout.html" type="submit" class="btn btn-primary btn-block">送出</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- 輪播 -->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -243,19 +223,19 @@
                 <img src="./image/41.jpg" class="img-fluid" alt="另一張圖片">
             </div>
         </div>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card">
-                        <img src="./image/33.jpg" class="card-img-top" alt="額外圖片1">
-                    </div>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="./image/33.jpg" class="card-img-top" alt="額外圖片1">
                 </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card">
-                        <img src="./image/35.jpg" class="card-img-top" alt="額外圖片2">
-                    </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="./image/35.jpg" class="card-img-top" alt="額外圖片2">
                 </div>
             </div>
         </div>
+    </div>
 
     <!-- 頁脚 -->
     <div class="footer mt-5">
@@ -298,18 +278,18 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             var cartItems = document.createElement('ul'); // 創建一個 ul 元素來容納購物車項目
             cartItems.id = 'cartItems';
             document.body.appendChild(cartItems);
-            
+
             var emptyCartMessage = document.getElementById('emptyCartMessage');
             var emptyCartMessageFloating = document.getElementById('emptyCartMessageFloating');
             var cartBadge = document.querySelector('.badge.badge-pill.badge-danger');
             var addToCartButtons = document.querySelectorAll('.add-to-cart');
 
-            addToCartButtons.forEach(function(button) {
-                button.addEventListener('click', function() {
+            addToCartButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
                     var itemName = this.getAttribute('data-item');
                     var listItem = document.createElement('li');
                     listItem.className = 'list-group-item';
@@ -319,7 +299,7 @@
                 });
             });
 
-            document.getElementById('cartIcon').addEventListener('click', function() {
+            document.getElementById('cartIcon').addEventListener('click', function () {
                 if (cartItems.children.length === 0) {
                     emptyCartMessage.style.display = 'block';
                 } else {
@@ -344,4 +324,5 @@
         });
     </script>
 </body>
+
 </html>
