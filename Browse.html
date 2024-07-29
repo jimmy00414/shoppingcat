@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 
 <head>
     <meta charset="UTF-8">
@@ -16,25 +16,103 @@
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
 
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .navbar-brand i {
+            margin-right: 10px;
+        }
+
+        .btn-cart {
+            position: relative;
+        }
+
+        .btn-cart .badge {
+            position: absolute;
+            top: -5px;
+            right: -10px;
+        }
+
+        .breadcrumb-item a {
+            color: #007bff;
+        }
+
+        .product-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .price-area {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .price-area .text-muted {
+            font-size: 1.25rem;
+        }
+
+        .price-area .h3 {
+            font-size: 2rem;
+        }
+
+        .btn-group-toggle .btn {
+            margin-right: 5px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .card img {
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+        }
+
+        .text-muted {
+            font-size: 0.875rem;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 30px 0;
+        }
+
+        footer .list-inline-item a {
+            color: #007bff;
+        }
+
+        h3{
+            font-size: 1.75rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+    </style>
 </head>
-<style>
-    body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif
-    }
-</style>
 
 <body>
     <!--navber-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/"><i class="fas fa-shopping-basket"></i>安全喵購物網</a>
+        <a class="navbar-brand" href="/"><i class="fas fa-shopping-basket"></i> 安全喵購物網</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-            </ul>
+            <ul class="navbar-nav mr-auto"></ul>
             <div class="dropdown ml-auto">
                 <button class="btn btn-sm btn-cart" data-toggle="dropdown">
                     <i class="fas fa-shopping-cart text-dark fa-2x"></i>
@@ -44,7 +122,9 @@
                     <div class="px-4 py-3">
                         <table class="table table-sm">
                             <thead>
-                                <th colspan="4" class="text-center">已選擇商品B</th>
+                                <tr>
+                                    <th colspan="4" class="text-center">已選擇商品B</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 <tr>
@@ -60,10 +140,8 @@
                                     <td>$520</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="4"><button type="submit" class="btn btn-primary btn-block">送出</button>
-                                    </td>
+                                    <td colspan="4"><button type="submit" class="btn btn-primary btn-block">送出</button></td>
                                 </tr>
-
                             </tbody>
                         </table>
                     </div>
@@ -71,6 +149,7 @@
             </div>
         </div>
     </nav>
+
     <div class="container">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb bg-transparent pl-0">
@@ -79,21 +158,20 @@
                 <li class="breadcrumb-item active" aria-current="page">安全喵</li>
             </ol>
         </nav>
+
         <div class="row">
             <div class="col-md-4">
                 <div class="sticky-top" style="top:10px;">
-                    <h1 class="h2">ARAI RX-7X NAKAGAMI GP2全罩安全帽
-
-                    </h1>
-                    <div class="d-flex justify-content-end align-items-end">
-                        <div class="text-muted ">售價 $999</div>
+                    <h1 class="product-title">ARAI RX-7X NAKAGAMI GP2全罩安全帽</h1>
+                    <div class="price-area">
+                        <div class="text-muted">售價 $999</div>
                         <div class="h3 ml-auto mb-0 text-danger">
                             <small>網路價 NT$</small>
                             <strong>520</strong>
                         </div>
                     </div>
                     <hr>
-                    尺寸:
+                    <div class="mb-3">尺寸:</div>
                     <div class="btn-group btn-group-toggle btn-group-sm" data-toggle="buttons">
                         <label class="btn btn-outline-secondary active">
                             <input type="radio" name="options" id="option1" autocomplete="off" checked> SM
@@ -127,13 +205,13 @@
 
             <div class="col-md-8 text-center">
                 <h2>ARAI RX-7X NAKAGAMI GP2全罩安全帽</h2>
-                <p class="text-center">Arai RX-7X是目前最新頂級款式，徹底實現「高剛性」、「輕量化」、「超密合」的三大理想。</p>
-                <h3 class="text-center"><strong>帥氣外觀</strong></h3>
-                <img src="/image/51.png" class="img-fluid w-100" alt="">
-                <h3 class="text-center"><strong>優秀通風</strong></h3>
-                <img src="/image/52.png" class="img-fluid w-100" alt="">
-                <h3 class="text-center"><strong>舒適內襯</strong></h3>
-                <img src="/image/53.png" class="img-fluid w-100" alt="">
+                <p>Arai RX-7X是目前最新頂級款式，徹底實現「高剛性」、「輕量化」、「超密合」的三大理想。</p>
+                <h3><strong>帥氣外觀</strong></h3>
+                <img src="./image/51.png" class="img-fluid w-100" alt="">
+                <h3><strong>優秀通風</strong></h3>
+                <img src="./image/52.png" class="img-fluid w-100" alt="">
+                <h3><strong>舒適內襯</strong></h3>
+                <img src="./image/53.png" class="img-fluid w-100" alt="">
                 <div class="card p-2 bg-light mt-4">
                     <div class="card-body">
                         <h2 class="text-center">購物說明</h2>
@@ -158,35 +236,31 @@
                         </p>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- <div class="container mt-5">
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <h2>評論</h2>
-                    <form id="commentForm">
-                        <div class="form-group">
-                            <label for="name">姓名</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="comment">留言</label>
-                            <textarea class="form-control" id="comment" name="comment" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">送出</button>
-                    </form>
-                    <div id="commentsSection" class="mt-5">
-                        <h3>所有評論</h3>
-                        <div id="commentsList">
-                            這裡會動態載入評論
+                <div class="card p-2 bg-light mt-4">
+                    <div class="card-body">
+                        <h2 class="text-center">評論</h2>
+                        <div class="mt-4">
+                            <div class="border-bottom pb-3 mb-3">
+                                <h5 class="card-title">張三</h5>
+                                <p class="card-text">這頂安全帽非常舒適，質量也很好。</p>
+                                <p class="card-text"><small class="text-muted">2024年7月20日</small></p>
+                            </div>
+                            <div class="border-bottom pb-3 mb-3">
+                                <h5 class="card-title">李四</h5>
+                                <p class="card-text">樣式很帥氣，通風也不錯。</p>
+                                <p class="card-text"><small class="text-muted">2024年7月18日</small></p>
+                            </div>
+                            <div class="border-bottom pb-3 mb-3">
+                                <h5 class="card-title">王五</h5>
+                                <p class="card-text">內襯非常舒適，不會悶熱。</p>
+                                <p class="card-text"><small class="text-muted">2024年7月15日</small></p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> -->
-
-
+        </div>
 
         <footer class="bg-light text-muted py-5">
             <div class="container">
@@ -218,47 +292,6 @@
             integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
             crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
-
-
-        <!-- 表單提交並動態更新評論區域
-        <script>
-            $(document).ready(function () {
-                載入評論的函數
-                function loadComments() {
-                    $.ajax({
-                        url: 'load_comments.php',
-                        method: 'GET',
-                        success: function (response) {
-                            $('#commentsList').html(response);
-                        }
-                    });
-                }
-
-                初次載入
-                loadComments();
-
-                處理表單提交
-                $('#commentForm').on('submit', function (event) {
-                    event.preventDefault();
-                    var name = $('#name').val();
-                    var comment = $('#comment').val();
-                    $.ajax({
-                        url: 'add_comment.php',
-                        method: 'POST',
-                        data: { name: name, comment: comment },
-                        success: function (response) {
-                            if (response == 'success') {
-                                loadComments();
-                                $('#commentForm')[0].reset();
-                            } else {
-                                alert('添加評論時出錯');
-                            }
-                        }
-                    });
-                });
-            });
-        </script> -->
-
 </body>
 
 </html>
