@@ -1,0 +1,22 @@
+#commentsSection {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.comment {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+.comment .name {
+    font-weight: bold;
+}
+
+.comment .text {
+    margin-top: 5px;
+}

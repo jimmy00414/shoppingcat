@@ -1,10 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-tw">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>登入</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('background.jpg'); /* 背景圖片 */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); /* 背景透明度 */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .btn-primary {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .btn-link {
+            padding: 0;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .alert {
+            text-align: center;
+        }
+        .links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -25,9 +70,11 @@
                 <input type="password" class="form-control" id="password" name="password" required>
             </div>
             <button type="submit" class="btn btn-primary">登入</button>
-            <a href="register.html" class="btn btn-link">註冊</a>
-            <a href="forgot_password.html" class="btn btn-link">忘記密碼</a>
-            <a href="index.html" class="btn btn-link float-right">返回首頁</a>
+            <div class="links">
+                <a href="register.html" class="btn btn-link">註冊</a>
+                <a href="forgot_password.html" class="btn btn-link">忘記密碼</a>
+                <a href="index.html" class="btn btn-link float-right">返回首頁</a>
+            </div>
         </form>
     </div>
     

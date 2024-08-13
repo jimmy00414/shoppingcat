@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>產品清單頁</title>
+    <link rel="stylesheet" href="/ShoppingCart/css/Broedr.css">
     <link rel="stylesheet" href="/ShoppingCart/css/custom.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
         integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
@@ -15,25 +16,113 @@
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
 
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .navbar-brand i {
+            margin-right: 10px;
+        }
+
+        .btn-cart {
+            position: relative;
+        }
+
+        .btn-cart .badge {
+            position: absolute;
+            top: -5px;
+            right: -10px;
+        }
+
+        .breadcrumb-item a {
+            color: #007bff;
+        }
+
+        .product-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .price-area {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .price-area .text-muted {
+            font-size: 1.25rem;
+        }
+
+        .price-area .h3 {
+            font-size: 2rem;
+        }
+
+        .btn-group-toggle .btn {
+            margin-right: 5px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .card img {
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+        }
+
+        .text-muted {
+            font-size: 0.875rem;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 30px 0;
+        }
+
+        footer .list-inline-item a {
+            color: #007bff;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        
+        .star-rating .star {
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+        .star-rating .star:hover {
+            color: gold; /* 懸停效果 */
+        }
+    </style>
 </head>
-<style>
-    body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif
-    }
-</style>
 
 <body>
     <!--navber-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/"><i class="fas fa-shopping-basket"></i>安全喵購物網</a>
+        <a class="navbar-brand" href="/"><i class="fas fa-shopping-basket"></i> 安全喵購物網</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-            </ul>
+            <ul class="navbar-nav mr-auto"></ul>
             <div class="dropdown ml-auto">
                 <button class="btn btn-sm btn-cart" data-toggle="dropdown">
                     <i class="fas fa-shopping-cart text-dark fa-2x"></i>
@@ -43,7 +132,9 @@
                     <div class="px-4 py-3">
                         <table class="table table-sm">
                             <thead>
-                                <th colspan="4" class="text-center">已選擇商品</th>
+                                <tr>
+                                    <th colspan="4" class="text-center">已選擇商品B</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 <tr>
@@ -59,10 +150,8 @@
                                     <td>$520</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="4"><button type="submit" class="btn btn-primary btn-block">送出</button>
-                                    </td>
+                                    <td colspan="4"><button type="submit" class="btn btn-primary btn-block">送出</button></td>
                                 </tr>
-
                             </tbody>
                         </table>
                     </div>
@@ -70,6 +159,7 @@
             </div>
         </div>
     </nav>
+
     <div class="container">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb bg-transparent pl-0">
@@ -78,21 +168,20 @@
                 <li class="breadcrumb-item active" aria-current="page">安全喵</li>
             </ol>
         </nav>
+
         <div class="row">
             <div class="col-md-4">
                 <div class="sticky-top" style="top:10px;">
-                    <h1 class="h2">ARAI RX-7X NAKAGAMI GP2全罩安全帽
-                        
-                    </h1>
-                    <div class="d-flex justify-content-end align-items-end">
-                        <div class="text-muted ">售價 $999</div>
+                    <h1 class="product-title">ARAI RX-7X NAKAGAMI GP2全罩安全帽</h1>
+                    <div class="price-area">
+                        <div class="text-muted">售價 $999</div>
                         <div class="h3 ml-auto mb-0 text-danger">
                             <small>網路價 NT$</small>
                             <strong>520</strong>
                         </div>
                     </div>
                     <hr>
-                    尺寸:
+                    <div class="mb-3">尺寸:</div>
                     <div class="btn-group btn-group-toggle btn-group-sm" data-toggle="buttons">
                         <label class="btn btn-outline-secondary active">
                             <input type="radio" name="options" id="option1" autocomplete="off" checked> SM
@@ -104,20 +193,20 @@
                             <input type="radio" name="options" id="option3" autocomplete="off"> L
                         </label>
                         <label class="btn btn-outline-secondary">
-                            <input type="radio" name="options" id="option3" autocomplete="off"> XL
+                            <input type="radio" name="options" id="option4" autocomplete="off"> XL
                         </label>
                     </div>
                     <div class="input-group mt-3">
                         <select name="" id="" class="form-control mr-1">
                             <option value="1">1 頂</option>
-                            <option value="1">2 頂</option>
-                            <option value="1">3 頂</option>
-                            <option value="1">4 頂</option>
-                            <option value="1">5 頂</option>
-                            <option value="1">6 頂</option>
-                            <option value="1">7 頂</option>
-                            <option value="1">8 頂</option>
-                            <option value="1">9 頂</option>
+                            <option value="2">2 頂</option>
+                            <option value="3">3 頂</option>
+                            <option value="4">4 頂</option>
+                            <option value="5">5 頂</option>
+                            <option value="6">6 頂</option>
+                            <option value="7">7 頂</option>
+                            <option value="8">8 頂</option>
+                            <option value="9">9 頂</option>
                         </select>
                         <a href="./Checkout.html" class="btn btn-primary">加入購物車</a>
                     </div>
@@ -126,43 +215,58 @@
 
             <div class="col-md-8 text-center">
                 <h2>ARAI RX-7X NAKAGAMI GP2全罩安全帽</h2>
-                <p class="text-center">Arai RX-7X是目前最新頂級款式，徹底實現「高剛性」、「輕量化」、「超密合」的三大理想。</p>
-                <h3 class="text-center"><strong>帥氣外觀</strong></h3>
-                <img src="/image/51.png" class="img-fluid w-100"
-                    alt="">
-                <h3 class="text-center"><strong>優秀通風</strong></h3>
-                <img src="/image/52.png" class="img-fluid w-100"
-                    alt="">
-                <h3 class="text-center"><strong>舒適內襯</strong></h3>
-                <img src="/image/53.png" class="img-fluid w-100"
-                    alt="">
+                <p>Arai RX-7X是目前最新頂級款式，徹底實現「高剛性」、「輕量化」、「超密合」的三大理想。</p>
+                <h3><strong>帥氣外觀</strong></h3>
+                <img src="./image/51.png" class="img-fluid w-100" alt="">
+                <h3><strong>優秀通風</strong></h3>
+                <img src="./image/52.png" class="img-fluid w-100" alt="">
+                <h3><strong>舒適內襯</strong></h3>
+                <img src="./image/53.png" class="img-fluid w-100" alt="">
                 <div class="card p-2 bg-light mt-4">
                     <div class="card-body">
                         <h2 class="text-center">購物說明</h2>
                         <p>尺寸：
-                        xs:55-56cm
-                        M：57-58cm
-                        L：59-60cm
-                        XL：61-62cm
-                        <br>
-                        ※頭圍測量方法：
-                        拿皮尺在眉毛上方約1公分處
-                        如果沒有皮尺，可使用棉線等物體代替，在固定測量長度後以尺
-                        可量測2-3次抓取平均值會
-                        註：每個人頭型較為不同，有些微誤差皆屬於正常喔!
-                        <br>
-                        注意事項：<br>
-                        商品變動快速，可先詢問庫存。<br>
-                        超商取貨有積材限制，欲購買一頂安全帽以上須分2筆訂單。<br>
-                        每款螢幕色調不同，商品難免有些許色差，以原廠實際商品為主。<br>
-                        網路購物皆享有鑑賞期(非試用期)，商品經拆封使用無法退換貨，還請見諒。<br>
-                        如要到門市購買，請先和客服詢問庫存情況，以免造成雙方不便。<br>
+                            xs:55-56cm
+                            M：57-58cm
+                            L：59-60cm
+                            XL：61-62cm
+                            <br>
+                            ※頭圍測量方法：
+                            拿皮尺在眉毛上方約1公分處
+                            如果沒有皮尺，可使用棉線等物體代替，在固定測量長度後以尺
+                            可量測2-3次抓取平均值會
+                            註：每個人頭型較為不同，有些微誤差皆屬於正常喔!
+                            <br>
+                            注意事項：<br>
+                            商品變動快速，可先詢問庫存。<br>
+                            超商取貨有積材限制，欲購買一頂安全帽以上須分2筆訂單。<br>
+                            每款螢幕色調不同，商品難免有些許色差，以原廠實際商品為主。<br>
+                            網路購物皆享有鑑賞期(非試用期)，商品經拆封使用無法退換貨，還請見諒。<br>
+                            如要到門市購買，請先和客服詢問庫存情況，以免造成雙方不便。<br>
                         </p>
+                    </div>
+                </div>
+
+                <div class="card p-2 bg-light mt-4">
+                    <div class="card-body">
+                        <h2 class="text-center">評論</h2>
+                        <div id="review-stats" class="text-center"></div>
+                        <div class="mt-4" id="review-list">
+                            
+                        </div>
+                        <div class="text-center">
+                            <div class="star-rating" id="star-rating">
+                                <span class="star" data-value="1">★</span>
+                                <span class="star" data-value="2">★</span>
+                                <span class="star" data-value="3">★</span>
+                                <span class="star" data-value="4">★</span>
+                                <span class="star" data-value="5">★</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
 
         <footer class="bg-light text-muted py-5">
             <div class="container">
@@ -193,7 +297,49 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
             integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
             crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
-</body>
+        <script>
+            const reviews = [
+                { name: '張三', text: '這頂安全帽非常舒適，質量也很好。', date: '2024年7月20日', rating: 5 },
+                { name: '李四', text: '樣式很帥氣，通風也不錯。', date: '2024年7月18日', rating: 4 },
+                { name: '王五', text: '內襯非常舒適，不會悶熱。', date: '2024年7月15日', rating: 5 },
+            ];
 
+            function displayReviews(filterRating = null) {
+                const reviewList = document.getElementById('review-list');
+                const reviewStats = document.getElementById('review-stats');
+                const ratingCount = [0, 0, 0, 0, 0]; 
+
+                reviewList.innerHTML = ''; 
+
+                reviews.forEach(review => {
+                    if (filterRating === null || review.rating === filterRating) {
+                        const reviewDiv = document.createElement('div');
+                        reviewDiv.classList.add('border-bottom', 'pb-3', 'mb-3');
+                        reviewDiv.innerHTML = `
+                            <h5 class="card-title">${review.name} <span class="star-rating">${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}</span></h5>
+                            <p class="card-text">${review.text}</p>
+                            <p class="card-text"><small class="text-muted">${review.date}</small></p>
+                        `;
+                        reviewList.appendChild(reviewDiv);
+                    }
+                    ratingCount[review.rating - 1]++;
+                });
+
+                reviewStats.innerHTML = `
+                    <h5>評論統計</h5>
+                    <p>1星: ${ratingCount[0]} | 2星: ${ratingCount[1]} | 3星: ${ratingCount[2]} | 4星: ${ratingCount[3]} | 5星: ${ratingCount[4]}</p>
+                `;
+            }
+
+            document.getElementById('star-rating').addEventListener('click', function (e) {
+                const target = e.target;
+                if (target.classList.contains('star')) {
+                    const selectedRating = parseInt(target.getAttribute('data-value'));
+                    displayReviews(selectedRating);
+                }
+            });
+
+            displayReviews();
+        </script>
+    </body>
 </html>

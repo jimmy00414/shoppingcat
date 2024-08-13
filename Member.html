@@ -1,94 +1,170 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>會員中心</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-    />
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
-      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/"
-        ><i class="fas fa-shopping-basket" href="index.html"></i>安全喵購物網</a
-      >
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="productList.html">商品列表</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="order.html">我的訂單</a> </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Profile.html">個人資料</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Coupons.html">優惠卷</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Points.html">積分</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Favorites.html">喜好商品</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="BrowsingHistory.html">瀏覽紀錄</a>
-          </li>
-        </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>會員中心</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+    .navbar-brand {
+      font-weight: bold;
+    }
+    .container {
+      margin-top: 20px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .list-group-item {
+      transition: all 0.3s ease;
+      border: none;
+      border-bottom: 1px solid #ddd;
+    }
+    .list-group-item:hover {
+      background-color: #f1f1f1;
+    }
+    .list-group-item:last-child {
+      border-bottom: none;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .member-benefits {
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .member-benefits h2 {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    .member-benefits p {
+      margin-bottom: 10px;
+    }
+    .points-overview {
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .points-overview h2 {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    .points-overview p {
+      margin-bottom: 10px;
+    }
+    .faq {
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .faq h2 {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    .faq ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .faq li {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .faq li:last-child {
+      border-bottom: none;
+    }
+    .input-group {
+      width: 400px;
+    }
+    @media (max-width: 768px) {
+      .input-group {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/"><i class="fas fa-shopping-basket"></i> 安全喵購物網</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="productList.html">商品列表</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="order.html">我的訂單</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Profile.html">個人資料</a>
+        </li>
+      </ul>
+      <form class="form-inline ml-auto">
+        <div class="input-group">
+          <input type="text" class="form-control" id="searchInput" placeholder="搜尋安全喵喵">
+          <div class="input-group-append">
+            <button class="btn btn-warning" type="button" id="searchButton">搜尋</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>會員中心</h1>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="list-group">
+          <a href="productList.html" class="list-group-item list-group-item-action">商品列表</a>
+          <a href="order.html" class="list-group-item list-group-item-action">我的訂單</a>
+          <a href="Profile.html" class="list-group-item list-group-item-action">個人資料</a>
+          <a href="Coupons.html" class="list-group-item list-group-item-action">優惠卷</a>
+          <a href="Points.html" class="list-group-item list-group-item-action">積分</a>
+          <a href="Favorites.html" class="list-group-item list-group-item-action">喜好商品</a>
+          <a href="BrowsingHistory.html" class="list-group-item list-group-item-action">瀏覽紀錄</a>
+        </div>
       </div>
-    </nav>
-    <div class="container">
-      <h1>會員中心</h1>
-      <div class="list-group">
-        <a
-          href="productList.html"
-          class="list-group-item list-group-item-action"
-          >商品列表</a
-        >
-        <a href="Checkout.html" class="list-group-item list-group-item-action"
-          >訂單列表</a
-        >
-        <a href="Profile.html" class="list-group-item list-group-item-action"
-          >個人資料</a
-        >
-        <a href="Coupons.html" class="list-group-item list-group-item-action"
-          >優惠卷</a
-        >
-        <a href="Points.html" class="list-group-item list-group-item-action"
-          >積分</a
-        >
-        <a href="Favorites.html" class="list-group-item list-group-item-action"
-          >喜好商品</a
-        >
-        <a
-          href="BrowsingHistory.html"
-          class="list-group-item list-group-item-action"
-          >瀏覽紀錄</a
-        >
+      <div class="col-md-9">
+        <div class="member-benefits">
+          <h2>會員等級福利</h2>
+          <p>作為VIP會員，您將享受以下福利：</p>
+          <ul>
+            <li>全館免運費</li>
+            <li>專屬折扣碼</li>
+            <li>優先參與促銷活動</li>
+          </ul>
+        </div>
+        <div class="points-overview">
+          <h2>積分概況</h2>
+          <p>目前積分：<strong>500</strong> 點</p>
+          <p>積分可用於兌換優惠卷或直接抵扣購物金額。</p>
+        </div>
+        <div class="faq">
+          <h2>常見問題</h2>
+          <ul>
+            <li><strong>如何查詢我的訂單？</strong> 您可以在會員中心的「我的訂單」頁面查看所有訂單記錄。</li>
+            <li><strong>如何使用積分？</strong> 積分可以在結帳時直接抵扣金額，或在「積分」頁面兌換優惠卷。</li>
+            <li><strong>如何更新我的個人資料？</strong> 您可以在會員中心的「個人資料」頁面更新您的個人信息。</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>
