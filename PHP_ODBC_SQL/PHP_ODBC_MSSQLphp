@@ -1,0 +1,12 @@
+<?php
+     header("Content-Type:text/html; charset=utf-8");
+     $serverName="(IP位置或127.0.0.1-serverName)\SQLEXPRESS, (通訊埠Port)";
+     $connectionInfo=array("Database"=>"資料庫名稱dbName","UID"=>"使用者名稱userName","PWD"=>"使用者密碼password","CharacterSet" => "UTF-8(編碼)");
+     $conn=sqlsrv_connect($serverName,$connectionInfo);
+         if($conn){
+             echo "Success!!!";
+         }else{
+             echo "Error!!!<br />";
+             die(print_r(sqlsrv_errors(),true));
+         }            
+?>
